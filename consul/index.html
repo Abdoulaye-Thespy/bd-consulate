@@ -218,6 +218,7 @@
 <body>
   <div class="business-card">
     <div class="card-header text-center">
+        <img src="../assets/img/consul2.jpg" alt="" class="profile-img">
    <h1 class="name-title">Nsangou Mbombo Zounedou</h1>
       <p class="tagline">Expert en logistique et transport, Négociant international et Consul Honoraire</p>
     </div>
@@ -328,8 +329,8 @@ END:VCARD`;
     function downloadVCard() {
       const vCardData = `BEGIN:VCARD
 VERSION:3.0
-N:Zounedou;NSangoun Mbombo;;;
-FN:NSangoun Mbombo Zounedou
+N:Zounedou;Nsangou Mbombo;;;
+FN:Nsangou Mbombo Zounedou
 ORG:Global Logistics;Vocational Training Institute Global Academy
 TITLE:CEO & Founder, Honorary Consul of Bangladesh in Cameroon
 TEL;TYPE=WORK,VOICE:+237 6 20 06 83 85
@@ -344,7 +345,7 @@ END:VCARD`;
       const a = document.createElement('a');
       a.style.display = 'none';
       a.href = url;
-      a.download = 'NSangoun_Mbombo_Zounedou.vcf';
+      a.download = 'Nsangou_Mbombo_Zounedou.vcf';
       document.body.appendChild(a);
       a.click();
       window.URL.revokeObjectURL(url);
