@@ -118,6 +118,7 @@
       border-radius: 15px;
       text-align: center;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      margin-top: 25px;
     }
     
     .qr-code {
@@ -133,6 +134,12 @@
       justify-content: center;
     }
     
+    .qr-code img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    
     .download-btn {
       background: var(--gradient);
       border: none;
@@ -142,11 +149,13 @@
       margin-top: 20px;
       transition: all 0.3s;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+      color: white;
     }
     
     .download-btn:hover {
       transform: translateY(-3px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      color: white;
     }
     
     .nfc-info {
@@ -218,17 +227,17 @@
 <body>
   <div class="business-card">
     <div class="card-header text-center">
-        <img src="../assets/img/consul2.jpg" alt="" class="profile-img">
+        <img src="../assets/img/consul2.jpg" alt="Nsangou Mbombo Zounedou" class="profile-img">
    <h1 class="name-title">Nsangou Mbombo Zounedou</h1>
    <ul style="list-style: none;">
     <li>
       Honorary Consul of Bangladesh in Cameroon
     </li>
     <li>
-      Logistics Expert
+      Logistics Expert And International Trade 
     </li>
-        <li>
-      International Trade Expert
+     <li>
+      Knight of the Order of Valour
     </li>
    </ul>
     </div>
@@ -248,11 +257,11 @@
           </ul>
           
           <h4 class="mt-5 section-title">Diplomatic Experience</h4>
-          <p>Over 15 years of experience in international relations and economic development. Expertise in negotiating trade agreements and facilitating foreign investments.</p>
+          <p>Several years of experience in international relations and economic development. Expertise in negotiating trade agreements and facilitating foreign investments.</p>
         </div>
         
         <div class="col-md-5">
-          <div class="contact-details mt-5">
+          <div class="contact-details">
             <h4 class="section-title">Contact Information</h4>
             <ul class="contact-info">
               <li><i class="fas fa-phone"></i> <span>+237 6 20 06 83 85</span></li>
@@ -265,67 +274,33 @@
             </ul>
             
             <div class="social-links mt-4 d-flex">
-              <a href="#" class="btn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.linkedin.com/in/njigouh-abdoulaye-razak/" class="btn"><i class="fab fa-linkedin-in"></i></a>
               <a href="#" class="btn"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="btn"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.facebook.com/nmbombo" class="btn"><i class="fab fa-facebook-f"></i></a>
               <a href="#" class="btn"><i class="fas fa-envelope"></i></a>
             </div>
           </div>
 
-            <button class="btn btn-primary download-btn" onclick="downloadVCard()">
-              <i class="fas fa-download me-2"></i> Save to Contact
-            </button>
+          <!-- QR Code Section -->
+          <div class="qr-section">
+            <h5>Scan to Save Contact</h5>
+            <div class="qr-code">
+              <!-- Replace with your actual QR code image path -->
+              <img src="../assets/img/QRCodeConsul.png" alt="QR Code">
+            </div>
+            <p class="small">Use your phone's camera to scan and save contact details</p>
+          </div>
+
+          <button class="btn download-btn w-100" onclick="downloadVCard()">
+            <i class="fas fa-download me-2"></i> Save to Contact
+          </button>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- JavaScript for QR Code generation and vCard download -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+  <!-- JavaScript for vCard download -->
   <script>
-    // Generate QR Code
-    document.addEventListener('DOMContentLoaded', function() {
-      const vCardData = `BEGIN:VCARD
-VERSION:3.0
-N:Zounedou;NSangoun Mbombo;;;
-FN:NSangoun Mbombo Zounedou
-ORG:Global Logistics;Vocational Training Institute Global Academy
-TITLE:CEO & Founder, Honorary Consul of Bangladesh in Cameroon
-TEL;TYPE=WORK,VOICE:+237 6 20 06 83 85
-EMAIL;TYPE=PREF,INTERNET:contact@bdconsulatecam.cm
-URL:https://bdconsulatecam.cm
-ADR;TYPE=WORK:;;920 Independence Avenue, Bonapriso;Douala;;BP 3861;Cameroon
-NOTE:Businessman and experienced diplomat. CEO of Global Logistics, Promoter of Vocational Training Institute Global Academy, Honorary Consul of Bangladesh in Cameroon.
-END:VCARD`;
-      
-      // Generate QR code
-      const typeNumber = 0;
-      const errorCorrectionLevel = 'L';
-      const qr = qrcode(typeNumber, errorCorrectionLevel);
-      qr.addData(vCardData);
-      qr.make();
-      
-      // Draw QR code on canvas
-      const canvas = document.getElementById('qrCanvas');
-      const ctx = canvas.getContext('2d');
-      const cells = qr.getModuleCount();
-      
-      // Set canvas dimensions
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
-      
-      const tileW = canvas.width / cells;
-      const tileH = canvas.height / cells;
-      
-      // Draw in the canvas
-      for (let row = 0; row < cells; row++) {
-        for (let col = 0; col < cells; col++) {
-          ctx.fillStyle = qr.isDark(row, col) ? '#000000' : '#ffffff';
-          ctx.fillRect(col * tileW, row * tileH, tileW, tileH);
-        }
-      }
-    });
-    
     // Download vCard function
     function downloadVCard() {
       const vCardData = `BEGIN:VCARD
@@ -335,10 +310,14 @@ FN:Nsangou Mbombo Zounedou
 ORG:Global Logistics;Vocational Training Institute Global Academy
 TITLE:CEO & Founder, Honorary Consul of Bangladesh in Cameroon
 TEL;TYPE=WORK,VOICE:+237 6 20 06 83 85
-EMAIL;TYPE=PREF,INTERNET:contact@bdconsulatecam.cm
+TEL;TYPE=WORK,VOICE:+237 6 99 99 75 60
+EMAIL;TYPE=WORK,INTERNET:contact@bdconsulatecam.cm
+EMAIL;TYPE=WORK,INTERNET:contact@globalogistics.cm
 URL:https://bdconsulatecam.cm
+URL:https://globalogistics.cm
 ADR;TYPE=WORK:;;920 Independence Avenue, Bonapriso;Douala;;BP 3861;Cameroon
 NOTE:Businessman and experienced diplomat. CEO of Global Logistics, Promoter of Vocational Training Institute Global Academy, Honorary Consul of Bangladesh in Cameroon.
+PHOTO;VALUE=URL;TYPE=JPEG:../assets/img/consul2.jpg
 END:VCARD`;
       
       const blob = new Blob([vCardData], { type: 'text/vcard' });
