@@ -15,7 +15,9 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -36,58 +38,58 @@
       height: 100%;
       background: #fff;
     }
-    
+
     .blog-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     }
-    
+
     .blog-card-img {
       height: 220px;
       overflow: hidden;
     }
-    
+
     .blog-card-img img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.5s ease;
     }
-    
+
     .blog-card:hover .blog-card-img img {
       transform: scale(1.05);
     }
-    
+
     .blog-card-content {
       padding: 20px;
     }
-    
+
     .blog-card-title {
       font-size: 1.25rem;
       margin-bottom: 10px;
       font-weight: 600;
     }
-    
+
     .blog-card-title a {
       color: #333;
       text-decoration: none;
     }
-    
+
     .blog-card-title a:hover {
       color: #006a4e;
     }
-    
+
     .blog-card-meta {
       font-size: 0.875rem;
       color: #6c757d;
       margin-bottom: 15px;
     }
-    
+
     .blog-card-excerpt {
       color: #555;
       margin-bottom: 15px;
     }
-    
+
     .blog-card-read-more {
       color: #006a4e;
       font-weight: 500;
@@ -95,31 +97,31 @@
       display: inline-flex;
       align-items: center;
     }
-    
+
     .blog-card-read-more:hover {
       color: #004d38;
     }
-    
+
     .blog-card-read-more i {
       margin-left: 5px;
       transition: transform 0.3s ease;
     }
-    
+
     .blog-card-read-more:hover i {
       transform: translateX(3px);
     }
-    
+
     .section-header {
       margin-bottom: 40px;
     }
-    
+
     .section-header h2 {
       font-weight: 700;
       color: #333;
       position: relative;
       padding-bottom: 15px;
     }
-    
+
     .section-header h2:after {
       content: '';
       position: absolute;
@@ -129,17 +131,17 @@
       height: 3px;
       background-color: #006a4e;
     }
-    
+
     .blog-pagination ul {
       display: flex;
       list-style: none;
       padding: 0;
     }
-    
+
     .blog-pagination li {
       margin: 0 5px;
     }
-    
+
     .blog-pagination a {
       display: flex;
       align-items: center;
@@ -152,60 +154,60 @@
       text-decoration: none;
       transition: all 0.3s ease;
     }
-    
+
     .blog-pagination a:hover,
     .blog-pagination li.active a {
       background: #006a4e;
       color: #fff;
     }
-    
+
     .dual-language-article {
       margin-bottom: 40px;
     }
-    
+
     .language-section {
       margin-bottom: 30px;
     }
-    
+
     .language-section h3 {
       border-bottom: 2px solid #006a4e;
       padding-bottom: 10px;
       margin-bottom: 20px;
       color: #333;
     }
-    
+
     .article-images {
       margin: 30px 0;
     }
-    
+
     .article-images .row {
       margin-bottom: 20px;
     }
-    
+
     .article-images img {
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
-    
+
     .img-caption {
       font-size: 0.875rem;
       color: #6c757d;
       text-align: center;
       margin-top: 8px;
     }
-    
+
     @media (min-width: 992px) {
       .dual-language-container {
         display: flex;
         gap: 30px;
       }
-      
+
       .language-section {
         flex: 1;
         margin-bottom: 0;
       }
     }
-    
+
     @media (max-width: 991px) {
       .dual-language-container {
         display: block;
@@ -220,15 +222,37 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/white-bg3.png" alt="Bangladesh Consulate in Cameroon">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <!-- <h1 class="sitename">BD-CM</h1> -->
+        <img src="assets/img/white-bg3.png" alt="">
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" class="active">Home<br></a></li>
           <li><a href="about.html">About</a></li>
+          <!-- <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li> -->
           <li><a href="team.html">Team</a></li>
-          <li><a href="blog.html" class="active">Blog</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li> -->
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -262,7 +286,7 @@
         </div>
 
         <div class="row gy-4">
-          
+
           <!-- Blog Card 1 - Presidential Oath Ceremony -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="blog-card">
@@ -270,13 +294,15 @@
                 <img src="assets/img/oath-1.jpg" alt="Presidential Oath Ceremony in Cameroon">
               </div>
               <div class="blog-card-content">
-                <h3 class="blog-card-title"><a href="sermentcm.html">Oath-Taking Ceremony of President Paul Biya</a></h3>
+                <h3 class="blog-card-title"><a href="sermentcm.html">Oath-Taking Ceremony of President Paul Biya</a>
+                </h3>
                 <div class="blog-card-meta">
                   <i class="bi bi-calendar"></i> November 6, 2025 &nbsp;
                   <i class="bi bi-folder"></i> Political Events
                 </div>
                 <p class="blog-card-excerpt">
-                  President Paul Biya takes solemn oath before Parliament in Yaoundé following the official proclamation of election results.
+                  President Paul Biya takes solemn oath before Parliament in Yaoundé following the official proclamation
+                  of election results.
                 </p>
                 <a href="sermentcm.html" class="blog-card-read-more">
                   Read More <i class="bi bi-arrow-right"></i>
@@ -298,7 +324,8 @@
                   <i class="bi bi-folder"></i> Economic Relations
                 </div>
                 <p class="blog-card-excerpt">
-                  Reflecting on the successful Bangladesh Economic Forum held in Cameroon, fostering trade relations between Bangladesh and the CEMAC region.
+                  Reflecting on the successful Bangladesh Economic Forum held in Cameroon, fostering trade relations
+                  between Bangladesh and the CEMAC region.
                 </p>
                 <a href="ccma.html" class="blog-card-read-more">
                   Read More <i class="bi bi-arrow-right"></i>
@@ -307,17 +334,41 @@
             </div>
           </div><!-- End Blog Card -->
 
-        <!-- Pagination -->
-        <div class="blog-pagination mt-5">
-          <ul class="justify-content-center">
-            <li class="active"><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#"><i class="bi bi-arrow-right"></i></a></li>
-          </ul>
-        </div><!-- End Pagination -->
+          <!-- Blog Card 3 - Coffee Campaign Launch -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="blog-card">
+              <div class="blog-card-img">
+                <img src="assets/img/cf1.jpg" alt="Coffee Campaign Launch in Baditoum">
+              </div>
+              <div class="blog-card-content">
+                <h3 class="blog-card-title"><a href="coffee-campaign-launch.html">Launch of Cameroon's 2025/2026 Coffee
+                    Campaign</a></h3>
+                <div class="blog-card-meta">
+                  <i class="bi bi-calendar"></i> January 16, 2026 &nbsp;
+                  <i class="bi bi-folder"></i> Agriculture & Development
+                </div>
+                <p class="blog-card-excerpt">
+                  Official launch of the coffee campaign in Baditoum, highlighting Bangladesh's support through jute
+                  sacks for Cameroon's agricultural sector.
+                </p>
+                <a href="coffee-campaign-launch.html" class="blog-card-read-more">
+                  Read More <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div><!-- End Blog Card -->
 
-      </div>
+          <!-- Pagination -->
+          <div class="blog-pagination mt-5">
+            <ul class="justify-content-center">
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#"><i class="bi bi-arrow-right"></i></a></li>
+            </ul>
+          </div><!-- End Pagination -->
+
+        </div>
     </section><!-- /Blog Section -->
 
   </main>
@@ -333,7 +384,8 @@
             </a>
             <p>Honorary Consulate of the People's Republic of Bangladesh to the Republic of Cameroon</p>
             <div class="social-links d-flex mt-4">
-              <a href="https://www.facebook.com/profile.php?id=61579427578857" target="_blank"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=61579427578857" target="_blank"><i
+                  class="bi bi-facebook"></i></a>
               <a href="#"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
@@ -363,13 +415,15 @@
     </div>
 
     <div class="container copyright text-center">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">bdconsulatecam</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">bdconsulatecam</strong> <span>All Rights Reserved</span>
+      </p>
     </div>
 
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
